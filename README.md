@@ -4,7 +4,7 @@ CAR PARKING SYSTEM
 This project demonstrates how to implement a Car Parking System using Python.
 
 User needs to enter Information for the 1st time when it is starting the system and these are-
-\n1.) Capacity for SUV cars
+1.) Capacity for SUV cars
 2.) Capacity for SEDAN cars
 3.) Capacity for MINI cars or 2-Wheelers
 4.) Amount for SUV
