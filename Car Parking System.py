@@ -66,14 +66,13 @@ print()
 
 print("Starting the parking system")
 total=b+m+s #total parking space available
-ps=ParkingSystem(b,m,s,[0,b,m,s],bm,mm,sm,0)
+ps=ParkingSystem(b,m,s,[0,b,m,s],suv_money,sedan_money,mini_money,0)
 ee=str(input("Entry/Exit:").upper())
-car_number
 i=1
 while i<total:
     if(ee=="ENTRY"):
         print("\nENTRY MODE ON")
-        t=int(input("\n1.) SUV\n2.) SEDAN\n3.) MINI or 2-WHEELERS\n4.) Switch Mode (Entry/Exit)\n5.) Exit ---> 5\n\nEnter the Car Type / Mode:").strip())
+        t=int(input("\n1.) SUV\n2.) SEDAN\n3.) MINI or 2-WHEELERS\n4.) Switch Mode (Entry/Exit)\n5.) Exit\n\nEnter the Car Type / Mode:").strip())
         if(t==1 or t==2 or t==3):
             ps.addCar(t)
             print("---------------------------------------------------------")
