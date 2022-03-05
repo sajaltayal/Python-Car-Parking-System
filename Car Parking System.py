@@ -1,10 +1,10 @@
 class ParkingSystem:
-    def __init__(self, suv, sedan, mini,rs,bm,mm,sm,total_amount):
+    def __init__(self, suv, sedan, mini,rs,suv_money,sedan_money,mini_money,total_amount):
         self.sp = [0,suv,sedan,mini]    #we have started the array with zero because the car type we are taking starts with 1
         self.rs=rs  #copy of array 
-        self.bm=bm   #Charges for SUV
-        self.mm=mm  #Charges for SEDAN
-        self.sm=sm  #Charges for MINI / 2-WHEELER
+        self.suv_money=suv_money   #Charges for SUV
+        self.sedan_money=sedan_money  #Charges for SEDAN
+        self.mini_money=mini_money  #Charges for MINI / 2-WHEELER
         self.total_amount=total_amount  #total amount collected for today
         self.i=0  #threshold value to stop the system from taking further entries after the parking is full
 
@@ -34,14 +34,14 @@ class ParkingSystem:
             print("Capacity for MINI or 2-WHEELERS:",self.sp[3])
 
             if(carType==1):
-                print("\nNet Amount =",bm)
-                self.total_amount+=bm       #calculate amount for SUV
+                print("\nNet Amount =",suv_money)
+                self.total_amount+=suv_money       #calculate amount for SUV
             elif(carType==2):
-                print("\nNet Amount =",mm)
-                self.total_amount+=mm       #calculate amount for SEDAN
+                print("\nNet Amount =",sedan_money)
+                self.total_amount+=sedan_money       #calculate amount for SEDAN
             elif(carType==3):
-                print("\nNet Anount =",sm)
-                self.total_amount+=sm       #calculate amount for MINI / 2-Wheeler
+                print("\nNet Anount =",mini_money)
+                self.total_amount+=mini_money       #calculate amount for MINI / 2-Wheeler
             else:
                 print("\nNet Amount = 0")
                 self.total_amount+=0
@@ -59,15 +59,16 @@ class ParkingSystem:
 b=int(input("Capacity for SUV cars like Innova:").strip())      #Capacity for SUV 
 m=int(input("Capacity for SEDAN cars like Honda City:").strip())    #Capacity for SEDAN
 s=int(input("Capacity for 2 WHEELER or MINI CARS like Alto, Nano:").strip())    #Capacity for MINI / 2 wheeler 
-bm=int(input("Amount for SUV:").strip())    #Charges for SUV
-mm=int(input("Amount for SEDAN:").strip())  #Charges for SEDAN
-sm=int(input("Amount for MINI or 2-WHEELER:").strip())  #Charges for MINI
+suv_money=int(input("Amount for SUV:").strip())    #Charges for SUV
+sedan_money=int(input("Amount for SEDAN:").strip())  #Charges for SEDAN
+mini_money=int(input("Amount for MINI or 2-WHEELER:").strip())  #Charges for MINI
 print()
 
 print("Starting the parking system")
 total=b+m+s #total parking space available
 ps=ParkingSystem(b,m,s,[0,b,m,s],bm,mm,sm,0)
 ee=str(input("Entry/Exit:").upper())
+car_number
 i=1
 while i<total:
     if(ee=="ENTRY"):
